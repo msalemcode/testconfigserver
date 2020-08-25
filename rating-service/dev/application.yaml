@@ -3,15 +3,9 @@ server.servlet.context-path: /v1
 spring.security.oauth2.resourceserver.jwt:
     issuer-uri: https://sts.windows.net/ef29fa23-67e1-4363-8f49-6c521029bd71/
 emporio-transport.rating.crsv:
-    urls: http://crsv-l2.devapp.paas.fedex.com/crs/rest/v17,http://crsv-l3.devapp.paas.fedex.com/crs/rest/v17
+    urls: http://localhost:3001
     cache: false
     staticaccount: false
-    requestVolumeThreshold: 20
-    errorThresholdPercentage: 50
-    sleepWindowInMilliseconds: 1000
-    timeoutInMilliseconds: 30000
-    
-
 
 cosmos:
     uri: https://eastus2-fxs-victor-np-cosmosdb-cdba.documents.azure.com:443/
