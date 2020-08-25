@@ -2,6 +2,19 @@ management.endpoints.web.exposure.include: health,info,metrics
 server.servlet.context-path: /v1
 spring.security.oauth2.resourceserver.jwt:
     issuer-uri: https://sts.windows.net/ef29fa23-67e1-4363-8f49-6c521029bd71/
+emporio-transport.rating.crsv:
+    urls: http://crsv-l2.devapp.paas.fedex.com/crs/rest/v17,http://crsv-l3.devapp.paas.fedex.com/crs/rest/v17
+    cache: false
+    staticaccount: false
+    requestVolumeThreshold: 10
+    errorThresholdPercentage: 50
+    sleepWindowInMilliseconds: 1000
+    timeoutInMilliseconds: 30000
     
-emporio-transport.rating.crsv.urls: http://127.0.0.1:3001
-message: 'hello to Dev profile'
+
+
+cosmos:
+    uri: https://eastus2-fxs-victor-np-cosmosdb-cdba.documents.azure.com:443/
+    database: TSS_CosmosDB
+    container: rating_caching
+    queryMetricsEnabled: true
