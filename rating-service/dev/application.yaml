@@ -6,7 +6,7 @@ emporio-transport.rating.crsv:
     urls: http://crsv-l2.devapp.paas.fedex.com/crs/rest/v17,http://crsv-l3.devapp.paas.fedex.com/crs/rest/v17
     cache: false
     staticaccount: false
-    requestVolumeThreshold: 10
+    requestVolumeThreshold: 3
     errorThresholdPercentage: 50
     sleepWindowInMilliseconds: 1000
     timeoutInMilliseconds: 30000
