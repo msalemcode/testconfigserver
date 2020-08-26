@@ -1,33 +1,29 @@
-management.endpoints.web.exposure.include: health,info,metrics
+
+cosmos: 
+  container: rating_caching
+  database: TSS_CosmosDB
+  queryMetricsEnabled: true
+  uri: "https://eastus2-fxs-victor-np-cosmosdb-cdba.documents.azure.com:443/"
+emporio-transport.rating.crsv: 
+  cache: false
+  staticaccount: false
+  urls: "http://localhost:3001"
+feign: 
+  hystrix: 
+    enabled: true
+  url: "http://localhost:3001"
+hystrix: 
+  commond: 
+    circuitBreaker: 
+      errorThresholdPercentage: 100
+      requestVolumeThreshold: 2
+      sleepWindowInMilliseconds: 1000
+    default: 
+      execution: 
+        isolation: 
+          thread: 
+            timeoutInMilliseconds: 1000
+management.endpoints.web.exposure.include: "health,info,metrics"
 server.servlet.context-path: /v1
-spring.security.oauth2.resourceserver.jwt:
-    issuer-uri: https://sts.windows.net/ef29fa23-67e1-4363-8f49-6c521029bd71/
-emporio-transport.rating.crsv:
-    urls: http://localhost:3001
-    cache: false
-    staticaccount: false
-
-cosmos:
-    uri: https://eastus2-fxs-victor-np-cosmosdb-cdba.documents.azure.com:443/
-    database: TSS_CosmosDB
-    container: rating_caching
-    queryMetricsEnabled: true
-    
-    
-feign :
-    url: http://localhost:3001
-    hystrix:
-        enabled: true
-        
-hystrix:
-    commeand:
-	    default:
-		    execution:
-			    isolation:
-				    thread:
-					    timeoutInMilliseconds: 1000
-
-            circuitBreaker:
-			    requestVolumeThreshold: 2
-                errorThresholdPercentage: 100
-                sleepWindowInMilliseconds: 1000
+spring.security.oauth2.resourceserver.jwt: 
+  issuer-uri: "https://sts.windows.net/ef29fa23-67e1-4363-8f49-6c521029bd71/"
