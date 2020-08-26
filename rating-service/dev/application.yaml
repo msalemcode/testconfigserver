@@ -13,4 +13,7 @@ cosmos:
     container: rating_caching
     queryMetricsEnabled: true
     
+    
+fiegn:
+   url: http://localhost:3001
 
