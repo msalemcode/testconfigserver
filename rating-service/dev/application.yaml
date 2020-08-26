@@ -13,6 +13,4 @@ cosmos:
     container: rating_caching
     queryMetricsEnabled: true
     
-feign:
-    hystrix:
-        enabled: true
+
