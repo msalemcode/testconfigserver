@@ -14,6 +14,20 @@ cosmos:
     queryMetricsEnabled: true
     
     
-feign:
+feign :
     url: http://localhost:3001
+    hystrix:
+        enabled: true
+        
+hystrix:
+    commeand:
+	    default:
+		    execution:
+			    isolation:
+				    thread:
+					    timeoutInMilliseconds: 1000
 
+            circuitBreaker:
+			    requestVolumeThreshold: 2
+                errorThresholdPercentage: 100
+                sleepWindowInMilliseconds: 1000
