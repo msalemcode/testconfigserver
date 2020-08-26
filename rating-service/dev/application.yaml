@@ -12,17 +12,7 @@ feign:
   hystrix: 
     enabled: true
   url: "http://localhost:3001"
-hystrix: 
-  commond: 
-    circuitBreaker: 
-      errorThresholdPercentage: 50
-      requestVolumeThreshold: 10
-      sleepWindowInMilliseconds: 10000
-    default: 
-      execution: 
-        isolation: 
-          thread: 
-            timeoutInMilliseconds: 1000
+  
 management.endpoints.web.exposure.include: "health,info,metrics"
 server.servlet.context-path: /v1
 spring.security.oauth2.resourceserver.jwt: 
