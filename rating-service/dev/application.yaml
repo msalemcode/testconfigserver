@@ -12,3 +12,7 @@ cosmos:
     database: TSS_CosmosDB
     container: rating_caching
     queryMetricsEnabled: true
+    
+feign:
+    hystrix:
+        enabled: true
