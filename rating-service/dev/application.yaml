@@ -15,9 +15,9 @@ feign:
 hystrix: 
   commond: 
     circuitBreaker: 
-      errorThresholdPercentage: 100
-      requestVolumeThreshold: 2
-      sleepWindowInMilliseconds: 1000
+      errorThresholdPercentage: 50
+      requestVolumeThreshold: 10
+      sleepWindowInMilliseconds: 10000
     default: 
       execution: 
         isolation: 
