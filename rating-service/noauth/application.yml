@@ -5,7 +5,7 @@ cosmos:
   queryMetricsEnabled: true
   uri: "https://eastus2-fxs-victor-np-cosmosdb-cdba.documents.azure.com:443/"
 emporio-transport.rating.crsv: 
-  cache: false
+  cache: true
   staticaccount: false
   urls: "http://localhost:3001"
 feign: 
