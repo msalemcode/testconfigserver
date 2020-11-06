@@ -26,7 +26,7 @@ hystrix:
             timeoutInMilliseconds: 10000
             
 management.endpoints.web.exposure.include: "health,info,metrics,refresh"
-server.servlet.context-path: /v1
+server.servlet.context-path: /
 spring.security.oauth2.resourceserver.jwt: 
   issuer-uri: "https://sts.windows.net/ef29fa23-67e1-4363-8f49-6c521029bd71/"
 
